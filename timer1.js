@@ -5,7 +5,7 @@ if (delays.length === 0) {
 }
 
 for (const delay of delays) {
-  if (delay > 0 && isNaN(delay) !== true) {
+  if (delay >= 0 && isNaN(delay) !== true) {
     setTimeout(() => {
       process.stdout.write('\x07');
     }, delay * 1000);
